@@ -30,8 +30,8 @@ pipeline {
         userRemoteConfigs: [[
         credentialsId: 'GitHub_IsaRuizBer',
         url:'https://github.com/IsaRuizBer/Ceiba-Pagos']]])
-        sh 'chmod +x gradlew'
-        sh './gradlew --b ./build.gradle clean'
+        sh 'chmod +x ./backend/gradlew'
+        sh './backend/gradlew --b ./build.gradle clean'
       }
     }
 
@@ -45,7 +45,7 @@ pipeline {
   stage('Compile') {
           steps{
             // sh './build.gradle compileJava'
-            sh './gradlew --b ./backend/build.gradle compileJava'
+            sh './backend/gradlew --b ./backend/build.gradle compileJava'
              }
         }
 
@@ -54,7 +54,7 @@ pipeline {
 
 
                   echo "------------>Unit Tests<------------"
-                  sh './gradlew --b ./backend/build.gradle test'
+                  sh './backend/gradlew --b ./backend/build.gradle test'
 
       }
     }
