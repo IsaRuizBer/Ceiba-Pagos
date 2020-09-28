@@ -21,10 +21,6 @@ public interface RespositorioPago {
      */
     boolean existe(Pago pago);
 
-    /**
-     * Permite obtener los pagos
-     * @return
-     */
-    Collection<DtoPago> obtenerPagos();
+
 
 }

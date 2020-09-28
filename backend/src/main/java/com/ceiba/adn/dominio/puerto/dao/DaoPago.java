@@ -2,7 +2,8 @@ package com.ceiba.adn.dominio.puerto.dao;
 
 import com.ceiba.adn.dominio.modelo.dto.DtoPago;
 
-import java.util.Collection;
+
+import java.util.List;
 
 public interface DaoPago {
 
@@ -10,5 +11,5 @@ public interface DaoPago {
      * Permite obtener los pagos
      * @return
      */
-    Collection<DtoPago> obtenerPagos();
+    List<DtoPago> obtenerPagos();
 }

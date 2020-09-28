@@ -1,21 +1,21 @@
 package com.ceiba.adn.dominio.servicio;
 
 import com.ceiba.adn.dominio.modelo.dto.DtoPago;
-import com.ceiba.adn.dominio.modelo.entidad.Pago;
-import com.ceiba.adn.dominio.puerto.repositorio.RespositorioPago;
+import com.ceiba.adn.dominio.puerto.dao.DaoPago;
 
 import java.util.List;
 
 public class ServicioObtenerPago {
 
-    private final RespositorioPago repositorioPago;
+
+    private final DaoPago respositorio;
 
 
-    public ServicioObtenerPago(RespositorioPago repositorioPago) {
-        this.repositorioPago = repositorioPago;
+    public ServicioObtenerPago(DaoPago respositorio) {
+        this.respositorio = respositorio;
     }
 
     public List<DtoPago> ejecutar() {
-        return (List<DtoPago>) repositorioPago.obtenerPagos();
+        return  respositorio.obtenerPagos();
     }
 }
