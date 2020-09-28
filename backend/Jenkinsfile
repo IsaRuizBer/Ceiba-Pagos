@@ -29,7 +29,7 @@ pipeline {
         submoduleCfg: [],
         userRemoteConfigs: [[
         credentialsId: 'GitHub_IsaRuizBer',
-        url:'https://github.com/IsaRuizBer/Ceiba-Pagos/backend']]])
+        url:'https://github.com/IsaRuizBer/Ceiba-Pagos']]])
         sh 'chmod +x gradlew'
         sh './gradlew --b ./build.gradle clean'
       }
