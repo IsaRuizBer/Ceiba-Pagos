@@ -31,7 +31,7 @@ pipeline {
         credentialsId: 'GitHub_IsaRuizBer',
         url:'https://github.com/IsaRuizBer/Ceiba-Pagos']]])
         sh 'chmod +x ./backend/gradlew'
-        sh './backend/gradlew --b ./build.gradle clean'
+        sh './backend/gradlew --b .backend//build.gradle clean'
       }
     }
 
